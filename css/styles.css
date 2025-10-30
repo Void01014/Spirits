@@ -1,0 +1,256 @@
+*{
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+		font-family:'Momo Trust Display';
+
+}
+
+@font-face {
+  font-family: "dobkin";
+  src: url("fonts/DOS_____.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#menu-icon{
+	font-size: 35px;
+	z-index: 10001;
+	cursor: pointer;
+	display: none;
+	background-color: rgba(255, 255, 255, 0.253);
+	backdrop-filter: blur(1px);
+	border-radius: 5px;
+}
+
+.navbar{
+	display: flex;
+    justify-content: right;
+	align-items: baseline;
+	margin: 0;
+}
+
+.navbar a{
+	transition: .5s ease;
+	color: rgb(255, 255, 255);
+	margin-inline: 25px;
+	padding: 10px;
+	border-radius: 50px;
+	font-size: 1.1rem;
+	font-family:'Momo Trust Display';
+}
+
+.navbar li{
+	transition: .5s ease;
+}
+.navbar li:hover{
+	transition: .5s ease;
+	scale: 1.1;
+}
+
+#logo{
+	position: absolute;
+	font-family: 'dobkin';
+	font-size: 3.5em;
+	justify-content: left;	
+	color: rgb(254, 205, 149);
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.831);
+	left: 15%;
+	top: 10px;	
+}
+
+header{
+	display: flex;
+	position: sticky;
+	width: 80%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	padding: 25px 0;
+	background-color: rgba(255, 255, 255, 0.142);
+	width: 100%;
+	backdrop-filter: blur(7px);
+}
+main{
+	position: relative;
+	display: flex;
+	margin-top: -2.5rem;
+	justify-content: center;
+	font-size: calc(2.7rem + 1.2vw);
+	font-weight: 300;
+	text-align: center;
+}
+
+video{
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+	transition: opacity 0.4s ease;
+}
+
+#fade-1{
+	color: rgb(250, 236, 164);
+	font-family: "dobkin";
+	opacity: 0;
+	transition: opacity 2s ease;
+}
+
+#fade-2{
+	color: #fff5e2;
+	font-family:'Times New Roman', Times, serif;
+	opacity: 0;
+	transition: opacity 2s ease;
+}
+
+#fade-1.fade-in, #fade-2.fade-in{
+	opacity: 1;
+}
+
+/* --- Fade Scroll Effect --- */
+
+body {
+	margin: 0;
+  overflow-x: hidden;
+  background: #f5f0e6; 
+  height: fit-content;
+}
+
+
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: calc(12rem + 4vw) 5%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.box{
+	position: absolute;
+	width: 800px;
+	height: 200px;
+	overflow: hidden;
+	right: -10px;
+	bottom: -10px;
+}
+.box2{
+	position: absolute;
+	width: 800px;
+	height: 200px;
+	overflow: hidden;
+	left: -10px;
+	bottom: -10px;
+}
+.wave {
+	z-index: 100;
+	position: absolute;
+	opacity: .4;
+	width: 2000px;
+	height: 1800px;
+	top: 100px;
+	border-radius: 43%;
+	border: solid rgb(240, 238, 225);	
+}
+.wave2 {
+	z-index: 100;
+	position: absolute;
+	opacity: .4;
+	width: 2000px;
+	height: 1800px;
+	top: 100px;
+	right: 0;
+	border-radius: 43%;
+	border: solid rgb(240, 238, 225);	
+}
+.-one {
+	animation: rotate 14000ms infinite linear;
+	opacity: 40%;
+	background: rgb(237, 227, 151);
+}
+
+.-two {
+	animation: rotate 8000ms infinite linear;
+	opacity: 30%;
+	background: rgb(246, 208, 84);
+}
+.-three {
+	animation: rotate 11000ms infinite linear;
+	opacity: 40%;
+	background: rgba(239, 188, 86, 0.715);
+}
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+h2, h3{
+	color: rgb(255, 153, 0);
+	text-align: center;
+	font-size: calc(2rem + 2vw);
+}
+
+#intro_logo{
+	font-family: 'dobkin';
+	font-size: 2em;
+}
+
+
+@media (max-width: 1040px){
+	#menu-icon{
+		display: block;
+		margin-left: 150px;
+	}
+	
+	header{
+		justify-content:space-around;
+		padding: 18px 0;
+
+	}
+	
+	.home{
+		height: 88vh;
+	}
+	.navbar{
+		position: absolute;
+		top: 0;
+		right: -100%;
+		width: 200px;
+		height: 120vh;
+		background: #f8e6c4;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 150px 30px;
+		transition: 0.5s all;
+		margin-top: 0;
+		box-shadow: -1px 0px 10px rgba(128, 128, 128, 0.511);
+	}
+	.navbar a{
+		color: black;
+		display: block;
+		margin: 1.2rem 0;
+		background: none;
+	}
+	.open{
+		right: 0;
+	}
+	.list{
+		width: 50%;
+		margin-bottom: 12px;
+	}
+}
+
