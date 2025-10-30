@@ -31,14 +31,17 @@ window.addEventListener("DOMContentLoaded", () => {
     if (scrollY > windowHeight * 0.4) {
       content?.classList.add("visible");
       bg?.classList.add("none");
+      header.style.backgroundColor = ' rgba(0, 0, 0, 0.242)';
       headerlists.forEach(link => link.style.color = 'black');
     } else {
       content?.classList.remove("visible");
+      header.style.backgroundColor = '';
       bg?.classList.remove("none");
       headerlists.forEach(link => link.style.color = '');
     }
 
     header.classList.toggle("sticky", window.scrollY > 0);
+    
   });
 
   // Burger menu
