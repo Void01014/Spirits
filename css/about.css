@@ -24,6 +24,8 @@
 
 .navbar{
 	display: flex;
+	align-items: baseline;
+	padding: 0;
 }
 
 .navbar a{
